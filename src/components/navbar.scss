@@ -1,0 +1,62 @@
+.navbar{
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+
+    &--size{
+        height: 70px;
+    }
+
+    &--theme{
+
+    }
+
+    &__title{
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    &__left{
+        flex: 1;
+        display: flex;
+    }
+
+    &__middle{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__right{
+        flex: 1;
+        display: flex;
+    }
+
+    &__menus{
+        display: flex;
+        list-style: none;
+    }
+
+    &__menu{
+        margin-right: 60px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    &__options{
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+    }
+
+    &__option{
+        margin-right: 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.menu-icon{
+    margin-left: 10px;
+}

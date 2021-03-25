@@ -1,0 +1,145 @@
+.collection{
+
+    &--size{
+        height: 100%;
+    }
+
+    &__content{
+        display: flex;
+        padding: 20px 0;
+        
+        &--size{
+            min-height: 100%;
+        }
+    }
+
+    &__left{
+        flex: 1;
+        
+    }
+
+    &__right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+    }
+
+    &__top{
+        flex: 1;
+        display: flex;
+        height: 200px;
+    }
+
+    &-top{
+        
+        &__left{
+            border-radius: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &--theme{
+                background-color: #EFEFF4;
+            }
+        }
+
+        &__right{
+            border-radius: 10px;
+            flex: 1;
+            margin-left: 40px;
+            position: relative;
+        }
+    }
+
+    &__bottom{
+        position: relative;
+        flex: 1;
+        margin-top: 30px;
+        border-radius: 10px;
+
+        &--theme{
+            background-color: #F3C1BE;
+        }
+    }
+
+    &__title{
+        margin-top: 5px;
+        color: #1B2437;
+        font-size: 24px;
+    }
+
+    &__subtitle{
+        color: #1B2437;
+    }
+}
+
+.right-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.image{
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.bottom-image{
+    height: 100%;
+    width: 50%;
+    right: 0;
+    position: absolute;
+    border-radius:  0 10px 10px 0;
+}
+
+.button-new{
+    border: none;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgba($color: white, $alpha: .5);
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.top-right{
+    &__content{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.top-left{
+    &__content{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.bottom{
+    &__content{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        z-index: 100;
+    }
+}
+
+
+.bottom{
+    width: 80px;
+    position: absolute;
+    bottom: 50px;
+    color: white;
+}
