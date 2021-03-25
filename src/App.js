@@ -3,7 +3,8 @@ import NavbarComponent from './components/NavbarComponent';
 import SliderLayout from './layouts/SliderLayout';
 import CollectionLayout from './layouts/CollectionLayout';
 import CategoryLayout from './layouts/CategoryLayout';
-import ProductSection from './layouts/ProductSection';
+import ProductsLayout from './layouts/ProductsLayout';
+import FooterLayout from './layouts/FooterLayout';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <SliderLayout />
       <CollectionLayout />
       <CategoryLayout />
-      <ProductSection />
+      <ProductsLayout />
+      <FooterLayout />
     </div>
   );
 }

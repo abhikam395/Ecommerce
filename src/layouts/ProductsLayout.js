@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
-import './productsection.scss';
+import './products.scss';
 import image1 from './../assets/images/11.png';
 import image2 from './../assets/images/12.png';
 import image3 from './../assets/images/13.png';
 
-export default class ProductSection extends Component {
+export default class ProductLayouts extends Component {
 
     constructor(){
         super();

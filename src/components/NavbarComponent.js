@@ -53,7 +53,7 @@ export default class NavbarComponent extends Component {
         return (
             <nav className="navbar navbar--size navbar--theme">
                 <div className="navbar__left">
-                    <h2 className="navbar__title">Clay Shop</h2>
+                    <a href="/" className="navbar__title">Clay Shop</a>
                 </div>
                 <div className="navbar__middle">
                     <ul className="navbar__menus">

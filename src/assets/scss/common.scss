@@ -2,3 +2,41 @@
     width: 70%;
     margin: auto;
 }
+
+@media (min-width: 320px) and (max-width:480px){ 
+    /* smartphones, Android phones, landscape iPhone */ 
+    .center{
+        width: 100%;
+    }
+}
+@media (min-width: 481px) and (max-width:600px) { 
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    .center{
+        width: 95%;
+    }
+}
+@media (min-width: 601px) and (max-width:800px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .center{
+        width: 95%;
+    }
+}
+@media (min-width: 801px) and (max-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */
+    .center{
+        width: 90%;
+    }
+}
+@media (min-width: 1026px) and (max-width:1281px) { 
+    /* hi-res laptops and desktops */
+    .center{
+        width: 80%;
+    }
+}
+
+@media (min-width: 1282px) and (max-width:1408px) { 
+    /* hi-res laptops and desktops */
+    .center{
+        width: 80%;
+    }
+}
