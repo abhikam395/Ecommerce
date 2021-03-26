@@ -81,16 +81,27 @@
 
 @media (min-width: 320px) and (max-width:480px){ 
     /* smartphones, Android phones, landscape iPhone */ 
+    .productsection{
+        margin-top: 40px;
+    }
+
     .products{
         flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .product{
+        flex: 1;
+        width: 100%;
+        margin: 20px 0 0 0;
+
+        &__image{
+            width: 100%;
+        }
     }
 }
 @media (min-width: 481px) and (max-width:600px) { 
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
-    .productsection{
-        // margin-top: 100px;
-        background-color: red;
-    }
 
     .products{
         padding: 20px 0;

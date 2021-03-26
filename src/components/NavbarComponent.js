@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './navbar.scss';
 import {FiSearch, FiShoppingCart} from 'react-icons/fi';
 import {RiArrowDropDownLine} from 'react-icons/ri'
+
+import BlogsLayout from './../layouts/BlogsLayout';
 
 export default class NavbarComponent extends Component {
 
@@ -17,8 +19,19 @@ export default class NavbarComponent extends Component {
             options: [
                 {id: 1, icon: FiSearch, name: 'Search'},
                 {id: 2, icon: FiShoppingCart, name: 'Cart'},
-            ]
+            ],
+            blogLayoutState: false
         }
+        this.showBlogLayout = this.showBlogLayout.bind(this);
+        this.hideBlogLayout = this.hideBlogLayout.bind(this);
+    }
+
+    showBlogLayout(){
+        this.setState({blogLayoutState: true});
+    }
+
+    hideBlogLayout(){
+        this.setState({blogLayoutState: false});
     }
 
     renderOptions(options){
@@ -37,35 +50,53 @@ export default class NavbarComponent extends Component {
         return menus.map((menu) => {
             if(menu.name === 'Blog'){
                 return (
-                    <li className="navbar__menu" key={menu.id}>
-                        {menu.name}
+                    <li className="navbar__menu" 
+                        key={menu.id} 
+                        onMouseEnter={this.showBlogLayout}
+                        onMouseLeave={this.hideBlogLayout}>
+                        <a  
+                            href={`/#${menu.name}`} 
+                            className="link">
+                                {menu.name}
+                        </a>
                         <RiArrowDropDownLine className="menu-icon"/>
                     </li>
                 )
             }
-            return <li className="navbar__menu" key={menu.id}>{menu.name}</li>;
+            return <li 
+                    className="navbar__menu" 
+                    key={menu.id}>
+                    <a 
+                        href={`/#${menu.name}`} 
+                        className="link">
+                        {menu.name}
+                    </a>
+            </li>;
         })
     }
 
     render(){
-        let {menus, options} = this.state;
+        let {menus, options, blogLayoutState} = this.state;
 
         return (
-            <nav className="navbar navbar--size navbar--theme">
-                <div className="navbar__left">
-                    <a href="/" className="navbar__title">Clay Shop</a>
-                </div>
-                <div className="navbar__middle">
-                    <ul className="navbar__menus">
-                        {this.renderMenus(menus)}
-                    </ul>
-                </div>
-                <div className="navbar__right">
-                    <ul className="navbar__options">
-                        {this.renderOptions(options)}
-                    </ul>
-                </div>
-            </nav>
+            <Fragment>
+                <nav className="navbar navbar--size navbar--theme">
+                    <div className="navbar__left">
+                        <a href="/" className="navbar__title">Clay Shop</a>
+                    </div>
+                    <div className="navbar__middle">
+                        <ul className="navbar__menus">
+                            {this.renderMenus(menus)}
+                        </ul>
+                    </div>
+                    <div className="navbar__right">
+                        <ul className="navbar__options">
+                            {this.renderOptions(options)}
+                        </ul>
+                    </div>
+                </nav>
+                {blogLayoutState && <BlogsLayout />}
+            </Fragment>
         )
     }
 }

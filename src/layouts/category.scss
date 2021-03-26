@@ -100,13 +100,6 @@
 }
 @media (min-width: 481px) and (max-width:600px) { 
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
-    .categorysection{
-
-        &--size{
-            height: 350px;
-        }
-    }
-
     .categories{
         overflow-x: scroll;
     }
